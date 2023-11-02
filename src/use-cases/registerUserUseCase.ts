@@ -1,5 +1,5 @@
+import { UserRepository } from '@/repositories/user-repository'
 import { hash } from 'bcryptjs'
-import { UserRepository } from '../repositories/user-repository'
 import { UserAlredyExistError } from './errors/userAlreadyExistsError'
 
 export interface RegisterUserRequest {
