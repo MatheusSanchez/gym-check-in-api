@@ -6,7 +6,7 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
+    "test:coverage": "vitest --coverage",
     "dev": "tsx watch src/server.ts",
     "test:ui": "vitest --ui"
   },
