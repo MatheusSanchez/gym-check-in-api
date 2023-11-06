@@ -32,7 +32,7 @@ describe('Authenticate User Use Case', () => {
     const email = 'johndoe@email.com'
     const password = '12345'
 
-    expect(() =>
+    await expect(() =>
       authenticateUserUseCase.execute({ email, password }),
     ).rejects.toBeInstanceOf(InvalidCredentialsError)
   })
@@ -48,7 +48,7 @@ describe('Authenticate User Use Case', () => {
       password_hash: await hash(password, 6),
     })
 
-    expect(() =>
+    await expect(() =>
       authenticateUserUseCase.execute({
         email,
         password: wrongPassword,
