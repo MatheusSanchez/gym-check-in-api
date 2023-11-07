@@ -20,16 +20,14 @@ const gymCoordinate: Coordinate = {
 const gymId = 'gym-01'
 
 describe('Check-in use case', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     checkInRepository = new InMemoryCheckInRepository()
     gymRepository = new InMemomryGymRepository()
     checkInUseCase = new CheckInUseCase(checkInRepository, gymRepository)
 
-    gymRepository.dbGyms.push({
+    await gymRepository.create({
       id: gymId,
       title: 'JavaScript Gym',
-      description: '',
-      phone: '',
       latitude: new Decimal(gymCoordinate.latitude),
       longitude: new Decimal(gymCoordinate.longitude),
     })
