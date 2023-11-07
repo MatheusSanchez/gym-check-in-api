@@ -1,4 +1,3 @@
-import { Decimal } from '@prisma/client/runtime/library'
 import { GymRepository } from '../gym-repository'
 import { Gym } from '@prisma/client'
 
