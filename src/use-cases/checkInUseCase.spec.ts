@@ -5,6 +5,8 @@ import { UserAlredyCheckedInError } from './errors/userAlreadyCheckedIn'
 import { InMemomryGymRepository } from '@/repositories/in-memory/in-memory-gym-repository'
 import { Decimal } from '@prisma/client/runtime/library'
 import { Coordinate } from '@/utils/get-distance-between-coordinates'
+import { ResourceNotFoundError } from './errors/resourceNotFound'
+import { MaxDistanceError } from './errors/maxDistanceError'
 
 let checkInRepository: InMemoryCheckInRepository
 let gymRepository: InMemomryGymRepository
@@ -58,7 +60,7 @@ describe('Check-in use case', () => {
         userLatitude: gymCoordinate.latitude,
         userLongitude: gymCoordinate.longitude,
       }),
-    ).rejects.toBeInstanceOf(Error)
+    ).rejects.toBeInstanceOf(ResourceNotFoundError)
   })
 
   it('should not be able to check-in twice in the same day', async () => {
@@ -116,6 +118,6 @@ describe('Check-in use case', () => {
         userLatitude: farAwayUserCoordinate.latitude,
         userLongitude: farAwayUserCoordinate.longitude,
       }),
-    ).rejects.toBeInstanceOf(Error)
+    ).rejects.toBeInstanceOf(MaxDistanceError)
   })
 })
