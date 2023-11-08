@@ -1,19 +1,19 @@
 import { GymRepository } from '@/repositories/gym-repository'
 import { describe, expect, beforeEach, it } from 'vitest'
-import { CreateGymUseCaseUseCase } from './createGym'
+import { CreateGymUseCase } from './createGym'
 import { InMemomryGymRepository } from '@/repositories/in-memory/in-memory-gym-repository'
 
 let gymRepository: GymRepository
-let createGymUseCaseUseCase: CreateGymUseCaseUseCase
+let createGymUseCase: CreateGymUseCase
 
 describe('Create Gym Use Case Test', () => {
   beforeEach(() => {
     gymRepository = new InMemomryGymRepository()
-    createGymUseCaseUseCase = new CreateGymUseCaseUseCase(gymRepository)
+    createGymUseCase = new CreateGymUseCase(gymRepository)
   })
 
   it('should create a gym', async () => {
-    const { gym } = await createGymUseCaseUseCase.execute({
+    const { gym } = await createGymUseCase.execute({
       title: 'JavaScript Gym',
       description: '',
       phone: '',

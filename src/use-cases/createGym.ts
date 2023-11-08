@@ -13,7 +13,7 @@ export interface CreateGymUseCaseResponse {
   gym: Gym
 }
 
-export class CreateGymUseCaseUseCase {
+export class CreateGymUseCase {
   constructor(private gymRepository: GymRepository) {}
 
   async execute({
