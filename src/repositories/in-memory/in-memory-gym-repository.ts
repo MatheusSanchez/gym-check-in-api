@@ -30,4 +30,10 @@ export class InMemomryGymRepository implements GymRepository {
 
     return gym
   }
+
+  async searchByTitle(title: string, page: number) {
+    return this.dbGyms
+      .filter((gym) => gym.title.includes(title))
+      .slice((page - 1) * 20, page * 20)
+  }
 }
