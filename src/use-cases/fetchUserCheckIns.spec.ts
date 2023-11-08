@@ -1,6 +1,6 @@
 import { InMemoryCheckInRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
 import { expect, beforeEach, describe, it, vi, afterAll } from 'vitest'
-import { FetchUserCheckInsUseCase } from './fetchUserCheckInsUseCase'
+import { FetchUserCheckInsUseCase } from './fetchUserCheckIns'
 
 let checkInRepository: InMemoryCheckInRepository
 let fetchUserCheckInsUseCase: FetchUserCheckInsUseCase

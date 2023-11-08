@@ -1,6 +1,6 @@
 import { InMemoryCheckInRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
 import { expect, beforeEach, describe, it } from 'vitest'
-import { GetUserMetricsUseCase } from './getUserMetricsUseCase'
+import { GetUserMetricsUseCase } from './getUserMetrics'
 
 let checkInRepository: InMemoryCheckInRepository
 let getUserMetricsUseCase: GetUserMetricsUseCase

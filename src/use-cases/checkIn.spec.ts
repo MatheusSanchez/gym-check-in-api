@@ -1,5 +1,5 @@
 import { InMemoryCheckInRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
-import { CheckInUseCase } from './checkInUseCase'
+import { CheckInUseCase } from './checkIn'
 import { expect, beforeEach, describe, it, vi, afterAll } from 'vitest'
 import { UserAlredyCheckedInError } from './errors/userAlreadyCheckedIn'
 import { InMemomryGymRepository } from '@/repositories/in-memory/in-memory-gym-repository'
