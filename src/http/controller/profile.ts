@@ -5,8 +5,6 @@ export async function getUserProfile(
   request: FastifyRequest,
   response: FastifyReply,
 ) {
-  await request.jwtVerify() // fix: add that to a middleware
-
   const getUserProfileUseCase = buildGetUserProfileUseCase()
 
   const { user } = await getUserProfileUseCase.execute({
