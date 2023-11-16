@@ -27,6 +27,18 @@ describe('Search Gym E2E', () => {
         longitude: -48.3157508,
       })
 
+    await request(app.server)
+      .post('/gym')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        title: 'Do not find this gym',
+        description: 'Some description',
+        phone: '911',
+
+        latitude: -22.2258845,
+        longitude: -48.3157508,
+      })
+
     const response = await request(app.server)
       .get('/gym/search')
       .query({
