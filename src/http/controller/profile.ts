@@ -11,5 +11,7 @@ export async function getUserProfile(
     userId: request.user.sub,
   })
 
-  return response.status(200).send({ ...user, password_hash: undefined })
+  return response
+    .status(200)
+    .send({ user: { ...user, password_hash: undefined } })
 }
