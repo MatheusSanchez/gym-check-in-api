@@ -22,7 +22,7 @@ export async function createGym(
     createGymBodySchmea.parse(request.body)
 
   const createGymUseCase = buildCreateGymUseCase()
-  await createGymUseCase.execute({
+  const { gym } = await createGymUseCase.execute({
     title,
     description,
     phone,
@@ -30,5 +30,5 @@ export async function createGym(
     longitude,
   })
 
-  return response.status(201).send()
+  return response.status(201).send({ gym })
 }
