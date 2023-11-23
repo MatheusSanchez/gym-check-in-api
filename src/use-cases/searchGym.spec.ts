@@ -29,13 +29,13 @@ describe('Search Gym Use Case Test', () => {
       longitude: -49.6401091,
     })
 
-    const { gym } = await searchGymUseCase.execute({
+    const { gyms } = await searchGymUseCase.execute({
       title: 'Sancho Gym',
       page: 1,
     })
 
-    expect(gym).toHaveLength(1)
-    expect(gym).toEqual([expect.objectContaining({ title: 'Sancho Gym' })])
+    expect(gyms).toHaveLength(1)
+    expect(gyms).toEqual([expect.objectContaining({ title: 'Sancho Gym' })])
   })
 
   it('should be able to search a gym by title but pagionate', async () => {
@@ -49,13 +49,13 @@ describe('Search Gym Use Case Test', () => {
       })
     }
 
-    const { gym } = await searchGymUseCase.execute({
+    const { gyms } = await searchGymUseCase.execute({
       title: 'Sancho Gym',
       page: 2,
     })
 
-    expect(gym).toHaveLength(2)
-    expect(gym).toEqual([
+    expect(gyms).toHaveLength(2)
+    expect(gyms).toEqual([
       expect.objectContaining({ title: 'Sancho Gym-21' }),
       expect.objectContaining({ title: 'Sancho Gym-22' }),
     ])
