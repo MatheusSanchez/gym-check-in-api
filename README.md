@@ -1,7 +1,7 @@
 # SOLID STUDY
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/MatheusSanchez/gym-check-in-api/blob/main/README.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/MatheusSanchez/gym-check-in-api/blob/main/README.pt-br.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/MatheusSanchez/gym-check-in-api/blob/master/README.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/MatheusSanchez/gym-check-in-api/blob/master/README.pt-br.md)
 
 This repository is dedicated to the study of SOLID principles, Design Patterns, unit tests, integration tests, and GitHub Actions.
 
